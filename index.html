@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva de CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Guía Interactiva de CSS</h1>
+        <p>Cada sección demuestra una categoría de propiedades CSS, con ejemplo visual y código.</p>
+    </header>
+
+    <main>
+
+        <section class="demo">
+            <h2>1. Colores y fondos</h2>
+            <p>Propiedades: <code>color</code> y <code>background-color</code></p>
+
+           <div class="ejemplos-color">
+                <div class="caja caja-1" data-css="background-color: tomato;"></div>
+                <div class="caja caja-2" data-css="background-color: steelblue;"></div>
+                <div class="caja caja-3" data-css="background-color: #2ecc71;"></div>
+            </div>
+        </section>
+
+        <section class="demo">
+            <h2>2. Modelo de Caja (Box Model)</h2>
+            <p>Propiedades: <code>margin</code>, <code>border</code>, <code>padding</code></p>
+
+            <div class="box-model-demo">
+                <div class="capa-margin">
+                    margin
+                    <div class="capa-border">
+                        border
+                        <div class="capa-padding">
+                            padding
+                            <div class="capa-content">
+                                content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="nota-box">
+                Prueba abrir DevTools (F12) → pestaña Elements → selecciona esta caja, 
+                y mira el diagrama de Box Model que aparece en la pestaña "Computed" o "Layout".
+            </p>
+        </section>
+
+        <section class="demo">
+           <h2>3. box-sizing: border-box</h2>
+           <p>Propiedad: <code>box-sizing</code> — controla cómo se calcula el ancho total de un elemento</p>
+
+            <h3>❌ Sin border-box (comportamiento por defecto)</h3>
+            <div class="fila fila-mala">
+                <div class="tarjeta tarjeta-mala">Tarjeta 1</div>
+                <div class="tarjeta tarjeta-mala">Tarjeta 2</div>
+                <div class="tarjeta tarjeta-mala">Tarjeta 3</div>
+            </div>
+
+            <h3>✅ Con border-box (ancho correcto)</h3>
+            <div class="fila fila-buena">
+                <div class="tarjeta tarjeta-buena">Tarjeta 1</div>
+                <div class="tarjeta tarjeta-buena">Tarjeta 2</div>
+                <div class="tarjeta tarjeta-buena">Tarjeta 3</div>
+            </div>
+        </section>
+
+    <section class="demo">
+        <h2>4. Botones</h2>
+        <p>Propiedades: <code>padding</code>, <code>background-color</code>, <code>border-radius</code></p>
+
+         <button class="boton">Haz click aquí</button>
+    </section>
+
+    </main>
