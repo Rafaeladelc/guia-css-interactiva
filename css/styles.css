@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #fafafa;
+    color: #232629;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contenedor general de cada sección de la guía */
+.demo {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.demo h2 {
+    margin-bottom: 8px;
+}
+
+.demo code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* --- Sección 1: Colores --- */
+.ejemplos-color {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.caja {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.caja {
+    flex: 1;
+    height: 100px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+}
+
+.caja::after {
+    content: attr(data-css);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #232629;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: monospace;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.caja:hover::after {
+    opacity: 1;
+}
+
+.caja-1 {
+    background-color: tomato;
+    flex: 1;
+}
+
+.caja-2 {
+    background-color: steelblue;
+    flex: 2;
+}
+
+.caja-3 {
+    background-color: #2ecc71;
+    flex: 3;
+}
+
+/* --- Sección 2: Box Model --- */
+.box-model-demo {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.capa-margin {
+    background-color: #f9e0b8;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #8a5a00;
+}
+
+.capa-border {
+    background-color: #f7d488;
+    border: 4px solid #d98c00;
+    padding: 30px;
+    color: #6b4400;
+}
+
+.capa-padding {
+    background-color: #a8d8b9;
+    padding: 30px;
+    color: #1f5c34;
+}
+
+.capa-content {
+    background-color: #4a90d9;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 4px;
+}
+
+.nota-box {
+    font-size: 14px;
+    color: #666;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* --- Sección 3: box-sizing --- */
+.demo h3 {
+    margin: 20px 0 10px;
+    font-size: 16px;
+}
+
+.fila {
+    display: flex;
+    gap: 0;
+}
+
+.tarjeta {
+    width: 33.33%;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    border: 10px solid #d85a30;   /* antes: 3px */
+    background-color: #451908;
+    text-align: center;
+     box-sizing: content-box;
+    flex-shrink: 0;
+}
+
+/* Versión SIN border-box: se desborda */
+.tarjeta-mala {
+    box-sizing: border-box;
+}
+
+.fila-mala {
+    background: repeating-linear-gradient(
+        45deg,
+        #ffe5e5,
+        #ffe5e5 10px,
+        #ffd0d0 10px,
+        #ffd0d0 20px
+    );
+    padding: 4px;
+}
+
+/* Versión CON border-box: ancho correcto */
+.tarjeta-buena {
+    box-sizing: border-box;
+}
+
+.boton {
+  padding: 12px 24px;
+  background-color: blue;
+  color: white;
+}
+
+.boton {
+  padding: 12px 24px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: darkblue;
+}
