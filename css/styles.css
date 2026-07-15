@@ -105,12 +105,12 @@ main {
 
 .caja-2 {
     background-color: steelblue;
-    flex: 2;
+    flex: 1;
 }
 
 .caja-3 {
     background-color: #2ecc71;
-    flex: 3;
+    flex: 1;
 }
 
 /* --- Sección 2: Box Model --- */
